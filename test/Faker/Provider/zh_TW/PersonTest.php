@@ -34,11 +34,11 @@ class PersonTest extends \PHPUnit_Framework_TestCase
 
         $total = 0;
         $codesArray = str_split($codesString);
-        foreach ($codesArray as $code) {
-            $total += $code * Person::$idDigitValidator[$code];
+        foreach ($codesArray as $key => $code) {
+            $total += $code * Person::$idDigitValidator[$key];
         }
 
         // Validate
-        $this->assertEquals(0, ($total % 10), $id  . ' - ' . $codesString . ' - ' . $total);
+        $this->assertEquals(0, ($total % 10));
     }
 }
