@@ -24,7 +24,7 @@ class PersonTest extends \PHPUnit_Framework_TestCase
      */
     public function testPersonalIdentityNumber()
     {
-        $id = $this->faker->personalIdentityNumber();
+        $id = $this->faker->personalIdentityNumber;
 
         $firstChar = substr($id , 0 , 1);
         $codesString = Person::$idBirthplaceCode[$firstChar] . substr($id , 1);

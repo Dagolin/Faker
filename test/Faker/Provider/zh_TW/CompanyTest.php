@@ -21,6 +21,6 @@ class CompanyTest extends \PHPUnit_Framework_TestCase
 
     public function testVAT()
     {
-        $this->assertEquals(8, count($this->faker->VAT()));
+        $this->assertEquals(8, count($this->faker->VAT));
     }
 }
