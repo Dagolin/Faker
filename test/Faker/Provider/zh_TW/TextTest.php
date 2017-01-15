@@ -20,7 +20,7 @@ class TextTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function itShouldExplodeTheStringToArray()
+    function testItShouldExplodeTheStringToArray()
     {
         $this->assertSame(
             array('中', '文', '測', '試', '真', '有', '趣'),
@@ -34,7 +34,7 @@ class TextTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_should_return_the_string_length()
+    function testItShouldReturnTheStringLength()
     {
         $this->assertContains(
             $this->getMethod('strlen')->invokeArgs(null, array('中文測試真有趣')),
