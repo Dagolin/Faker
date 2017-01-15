@@ -39,6 +39,6 @@ class PersonTest extends \PHPUnit_Framework_TestCase
         }
 
         // Validate
-        $this->assertEquals(0, ($total % 10), $id);
+        $this->assertEquals(0, ($total % 10), $id  . ' - ' . $codesString . ' - ' . $total);
     }
 }
