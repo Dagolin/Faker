@@ -182,11 +182,10 @@ class Person extends \Faker\Provider\Person
         $randomNumberCode = self::randomNumber(7, true);
 
         $codes = str_split($birthPlaceCode . $genderCode . $randomNumberCode);
-
         $total = 0;
 
-        foreach ($codes as $code) {
-            $total += $code * self::$idDigitValidator[$code];
+        foreach ($codes as $key => $code) {
+            $total += $code * self::$idDigitValidator[$key];
         }
 
         $checkSumDigit = 10 - ($total % 10);
