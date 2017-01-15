@@ -20,7 +20,7 @@ class TextTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_should_explode_the_string_to_array()
+    function itShouldExplodeTheStringToArray()
     {
         $this->assertSame(
             array('中', '文', '測', '試', '真', '有', '趣'),
